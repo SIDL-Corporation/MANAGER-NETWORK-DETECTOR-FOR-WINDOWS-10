@@ -1,0 +1,2 @@
+# MANAGER-NETWORK-DETECTOR-FOR-WINDOWS-10
+Référentiel Officiel de l'application "MANAGER NETWORK DETECTOR For Windows 10"
