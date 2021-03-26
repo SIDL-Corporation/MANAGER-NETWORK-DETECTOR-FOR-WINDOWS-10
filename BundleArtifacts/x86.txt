@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\x86\Debug\MANAGER NETWORK DETECTOR_10.6.1.0_x86_Debug.msix
+SymbolPackage=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\obj\x86\Debug\Symbols\MANAGER NETWORK DETECTOR_10.6.1.0_x86_Debug.appxsym

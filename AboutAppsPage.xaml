@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="MANAGER_NETWORK_DETECTOR.AboutAppsPage"
+    xmlns:local="using:MANAGER_NETWORK_DETECTOR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:connevtivity="using:Microsoft.Toolkit.Uwp.Connectivity"
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:Custom1="using:Microsoft.UI.Xaml.Controls"
+    extensions:TitleBarExtensions.ButtonBackgroundColor="Transparent"
+    extensions:StatusBarExtensions.BackgroundOpacity="0"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Loading="Page_Loading">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Rangée de la barre de titre -->
+            <RowDefinition Height="Auto" />
+            <!-- Rangée du contenue de la page -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Grille de la barre de titre -->
+        <Grid Grid.Row="0" x:Name="customTitleBar" Height="32" Background="{ThemeResource SystemControlBaseLowAcrylicWindowBrush}">
+            <!-- Titre -->
+            <TextBlock Text="À PROPOS DE L'APPLICATION" VerticalAlignment="Center" Margin="12,0,0,0" RequestedTheme="Default" FocusVisualPrimaryBrush="#FFFFFFFC"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid x:Name="GRID_NETWORKPAGE">
+                <!-- Header de l'application -->
+                <Grid Height="70" VerticalAlignment="Top" Background="{ThemeResource SystemControlBaseLowAcrylicWindowBrush}">
+                    <Button x:Name="BUTTON_BACK" ToolTipService.ToolTip="Retour au menu des paramètres" ToolTipService.Placement="Bottom" CornerRadius="5" Width="48" Margin="10,10,0,10" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Click="BUTTON_BACK_Click">
+                        <Viewbox MaxWidth="16" MaxHeight="16">
+                            <SymbolIcon Symbol="Back"/>
+                        </Viewbox>
+                    </Button>
+                    <TextBlock Margin="63,15,14,11" Text="À PROPOS DE L'APPLICATION" TextWrapping="WrapWholeWords" FontSize="30" FontWeight="Bold"/>
+                </Grid>
+                <!-- Contenue de la page -->
+                <Grid x:Name="GRID_PAGE" Margin="0,70,0,0">
+                    <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,0">
+                        <StackPanel>
+                            <!-- more page content -->
+                            <Grid Height="890">
+                                <Grid x:Name="GRID_CONNECTIVITY_NETWORK" Margin="20,20,20,0" CornerRadius="15" Height="158" VerticalAlignment="Top">
+                                    <Grid.FocusVisualSecondaryBrush>
+                                        <AcrylicBrush TintColor="#CC006AA6" TintOpacity="0.55"/>
+                                    </Grid.FocusVisualSecondaryBrush>
+                                    <Grid.FocusVisualPrimaryBrush>
+                                        <AcrylicBrush TintColor="#CC006AA6" TintOpacity="0.55"/>
+                                    </Grid.FocusVisualPrimaryBrush>
+                                    <Grid.Background>
+                                        <AcrylicBrush TintColor="#CC006AA6" BackgroundSource="HostBackdrop" TintOpacity="0.55"/>
+                                    </Grid.Background>
+                                    <TextBlock Margin="20,5,20,0" Text="INFORMATIONS DE L'APPLICATION" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontWeight="Bold" FontSize="19" Height="23"/>
+                                    <TextBlock x:Name="NAME_APPS" Margin="125,64,20,0" Text="${APPS_NAME}" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontSize="14" Height="23"/>
+                                    <TextBlock x:Name="BUILD_APPS" Margin="125,83,20,0" Text="${APPS_BUILD}" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontSize="14" Height="23"/>
+                                    <TextBlock x:Name="APPS_EDITOR" Margin="125,102,20,0" Text="${APPS_EDITOR}" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontSize="14" Height="23"/>
+                                    <Rectangle Height="1" Margin="20,33,20,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                                        <Rectangle.RenderTransform>
+                                            <CompositeTransform ScaleY="-1"/>
+                                        </Rectangle.RenderTransform>
+                                        <Rectangle.Stroke>
+                                            <AcrylicBrush TintColor="#CC404040"/>
+                                        </Rectangle.Stroke>
+                                    </Rectangle>
+                                    <Image HorizontalAlignment="Left" Margin="20,44,0,14" Width="100" Source="/Assets/Logos/logo_about.png"/>
+                                </Grid>
+                                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="20,196,20,0" Text="DÉVELOPPEUR &amp; PARTENARIAT" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontWeight="Bold" FontSize="19" Height="23"/>
+                                <Grid Margin="20,234,20,0" CornerRadius="15,15,15,15" Height="185" VerticalAlignment="Top">
+                                    <Grid.Background>
+                                        <ImageBrush ImageSource="/Assets/Wallpapers/xallpaper.jpg" Stretch="UniformToFill"/>
+                                    </Grid.Background>
+                                    <Image Margin="10,10,10,25" Source="/Assets/Logos/logo 400x200.png"/>
+                                    <Grid CornerRadius="0,0,15,15" RequestedTheme="Dark" Height="52" VerticalAlignment="Bottom">
+                                        <Button Content="EN SAVOIR PLUS..." Style="{StaticResource ButtonRevealStyle}" Margin="0,10,10,10" VerticalAlignment="Stretch" CornerRadius="5" IsEnabled="True" HorizontalAlignment="Right" Width="189">
+                                            <Button.Flyout>
+                                                <MenuFlyout>
+                                                    <MenuFlyoutItem Text="SITE OFFICIEL - SIDL CORPORATION" Icon="{extensions:SymbolIcon Symbol=Globe}"/>
+                                                    <MenuFlyoutItem Text="CONTACT SUPPORT" Icon="{extensions:SymbolIcon Symbol=Mail}"/>
+                                                </MenuFlyout>
+                                            </Button.Flyout>
+                                        </Button>
+                                        <Grid.Background>
+                                            <AcrylicBrush TintOpacity="0.02" TintColor="#CC000000"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                    <Grid CornerRadius="15,0,15,0" RequestedTheme="Dark" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="179">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="10,0,12,0" Text="DÉVELOPPEUR / ÉDITEUR" TextWrapping="Wrap" VerticalAlignment="Center" RequestedTheme="Dark" FontSize="10" Height="14" FontWeight="Bold" FontStyle="Italic"/>
+                                        <Grid.Background>
+                                            <AcrylicBrush TintOpacity="0.55" TintColor="#CC000000"/>
+                                        </Grid.Background>
+                                    </Grid>
+                                </Grid>
+
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

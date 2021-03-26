@@ -1,0 +1,7 @@
+MainPackage=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_ARM_Debug.msix
+SymbolPackage=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\obj\ARM\Debug\Symbols\MANAGER NETWORK DETECTOR_10.6.0.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_language-fr.msix
+ResourcePack=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_scale-100.msix
+ResourcePack=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_scale-125.msix
+ResourcePack=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_scale-150.msix
+ResourcePack=C:\Users\Aymeric\Desktop\Manager Network Detector\File System\MND - UWP\MND_For_Win10\MANAGER NETWORK DETECTOR\bin\ARM\Debug\MANAGER NETWORK DETECTOR_10.6.0.0_scale-400.msix

@@ -1,0 +1,235 @@
+﻿<Page
+    xmlns:local="using:MANAGER_NETWORK_DETECTOR"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:rss="using:Microsoft.Toolkit.Parsers.Rss"
+    xmlns:Custom1="using:Microsoft.UI.Xaml.Controls"
+    x:Class="MANAGER_NETWORK_DETECTOR.MainPage"
+    extensions:TitleBarExtensions.ButtonBackgroundColor="Transparent"
+    extensions:StatusBarExtensions.BackgroundOpacity="0"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Loading="Page_Loading">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Rangée de la barre de titre -->
+            <RowDefinition Height="Auto" />
+            <!-- Rangée du contenue de la page -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Grille de la barre de titre -->
+        <Grid Grid.Row="0" x:Name="customTitleBar" Height="32" Background="{ThemeResource SystemControlBaseLowAcrylicWindowBrush}">
+            <!-- Titre -->
+            <TextBlock Text="MANAGER NETWORK DETECTOR · TABLEAU DE BORD" VerticalAlignment="Center" Margin="12,0,0,0" RequestedTheme="Default" FocusVisualPrimaryBrush="#FFFFFFFC"/>
+        </Grid>
+        <!-- Grille du contenue -->
+        <Grid Grid.Row="1">
+            <Grid x:Name="GRID_SETTING_BASIC">
+                <Grid Height="96" VerticalAlignment="Top" Background="{ThemeResource SystemControlBaseLowAcrylicWindowBrush}">
+                    <TextBox x:Name="UrlBox" Margin="10,10,850,56" Visibility="Collapsed" Text="{Binding SelectionBoxItem, ElementName=comboBox, Mode=TwoWay, UpdateSourceTrigger=Default}" />
+                    <ComboBox x:Name="comboBox" Margin="10,8,114,0" PlaceholderText="Sélectionnez une source d'actualités..." CornerRadius="8,8,8,8" BorderBrush="{x:Null}" HorizontalAlignment="Stretch" BorderThickness="1">
+                        <ComboBoxItem x:Name="CBI_ACTU_SIDLCORPORATION_FR" Content="https://sidl-corporation.fr/feed/gn" ToolTipService.ToolTip="Fil d'actualités &quot;SIDL CORPORATION&quot; (.fr)" Tag="Fil d'actualités &quot;SIDL CORPORATION&quot; (.fr)"/>
+                        <ComboBoxItem x:Name="CBI_A_LA_UNE_SIDLCORPORATION_FR" Content="https://sidl-corporation.fr/cat/a-la-une/feed/gn" ToolTipService.ToolTip="À la une &quot;SIDL CORPORATION&quot; (.fr)" Tag="À la une &quot;SIDL CORPORATION&quot; (.fr)"/>
+                        <ComboBoxItem x:Name="CBI_GOOGLE_NEWS" Content="https://news.google.com/rss?hl=fr" ToolTipService.ToolTip="Actualités Google News France" Tag="Actualités Google News France"/>
+                        <ComboBoxItem x:Name="CBI_JEUXVIDEO" Content="https://www.jeuxactu.com/rss/ja.rss" ToolTipService.ToolTip="Actualités JeuxActu France" Tag="Actualités JeuxActu France"/>
+                    </ComboBox>
+                    <AppBarSeparator Margin="0,2,62,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32"/>
+                    <AppBarSeparator Margin="0,2,25,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="32"/>
+                    <Button x:Name="BTN_SWITCH_PAGE_NETWORK" ToolTipService.ToolTip="Informations Réseaux" ToolTipService.Placement="Bottom" CornerRadius="5" Height="30" Margin="0,9,44,0" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" HorizontalAlignment="Right" Width="30" VerticalAlignment="Top" Click="BTN_SWITCH_PAGE_NETWORK_Click">
+                        <Viewbox MaxWidth="16" MaxHeight="16">
+                            <SymbolIcon Symbol="OneBar"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Click="{x:Bind Path=ParseRSS}" ToolTipService.ToolTip="Recherche du flux" ToolTipService.Placement="Bottom" CornerRadius="5" Height="30" Margin="0,9,81,0" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" HorizontalAlignment="Right" Width="30" VerticalAlignment="Top">
+                        <Viewbox MaxWidth="16" MaxHeight="16">
+                            <SymbolIcon Symbol="Find"/>
+                        </Viewbox>
+                    </Button>
+                    <Button x:Name="BUTTON_SETTINGS" ToolTipService.ToolTip="Paramètres de l'application" ToolTipService.Placement="Bottom" CornerRadius="5" Margin="0,9,7,0" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Width="30" Click="BUTTON_SETTINGS_Click">
+                        <Viewbox MaxWidth="16" MaxHeight="16">
+                            <SymbolIcon Symbol="Setting"/>
+                        </Viewbox>
+                    </Button>
+                </Grid>
+                <Pivot Margin="0,50,0,0">
+                    <PivotItem x:Name="PI_DASHBORD" Margin="0,-2,0,0" Header="| 🏠 · TABLEAU DE BORD">
+                        <Grid x:Name="Dashbord">
+                            <Grid.Background>
+                                <ImageBrush ImageSource="/Assets/Wallpapers/Wallpaper_MND_v_10.2.0.0.jpg" Stretch="UniformToFill"/>
+                            </Grid.Background>
+                            <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,0">
+                                <StackPanel>
+                                    <!-- more page content -->
+                                    <Grid Height="871">
+                                        <TextBlock Style="{StaticResource TitleTextBlockStyle}" Margin="22,10,30,0" Text="TABLEAU DE BORD" TextWrapping="Wrap" VerticalAlignment="Top" RequestedTheme="Dark" FontWeight="Bold" FontSize="30" Height="41" Foreground="{ThemeResource SystemControlAccentDark1AcrylicWindowAccentDark1Brush}"/>
+
+                                        <Grid x:Name="Dashbord_grid_1" Margin="40,72,40,0" CornerRadius="25,25,25,25" RequestedTheme="Default" RenderTransformOrigin="0.5,0.5" Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Height="140" VerticalAlignment="Top">
+                                            <!-- Effet du Dock -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button ToolTipService.ToolTip="Informations Réseaux" ToolTipService.Placement="Bottom" CornerRadius="25,5,5,25" Margin="5" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Width="120">
+                                                <Viewbox MaxWidth="25" MaxHeight="25" Margin="-25,-25,-25,-25">
+                                                    <SymbolIcon Symbol="OneBar"/>
+                                                </Viewbox>
+                                            </Button>
+                                            <TextBlock Margin="130,5,5,0" Text="INFORMATION RESEAU" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                                            <TextBlock Margin="130,32,5,0" Text="Récupérer toutes les informations de votre connexion internet (Hors adresse IP)." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                                            <Button x:Name="M_ViewNetwork" Content="Accéder >" Margin="0,0,10,10" CornerRadius="10" HorizontalAlignment="Right" Width="148" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Bottom" Height="30" BorderThickness="1" Click="M_ViewNetwork_Click"/>
+
+
+
+                                        </Grid>
+                                        <Grid x:Name="Dashbord_grid_1_Copy" Margin="40,217,40,0" CornerRadius="25,25,25,25" RequestedTheme="Default" RenderTransformOrigin="0.5,0.5" Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Height="140" VerticalAlignment="Top">
+                                            <!-- Effet du Dock -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button ToolTipService.ToolTip="Paramètre de l'application" ToolTipService.Placement="Bottom" CornerRadius="25,5,5,25" Margin="5,5,0,5" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Width="120">
+                                                <Viewbox MaxWidth="25" MaxHeight="25" Margin="-25,-25,-25,-25">
+                                                    <SymbolIcon Symbol="Setting"/>
+                                                </Viewbox>
+                                            </Button>
+                                            <TextBlock Margin="130,5,5,0" Text="PARAMETRE DE L'APPLICATION" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                                            <TextBlock Margin="130,32,5,0" Text="La page paramètre, regroupe toutes les fonctionnalités inclus dans l'application. Découvrez les dès maintenant..." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                                            <Button x:Name="M_ViewSetting" Content="Accéder &gt;" Margin="0,0,10,10" CornerRadius="10" HorizontalAlignment="Right" Width="148" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Bottom" Height="30" BorderThickness="1" Click="M_ViewSetting_Click"/>
+
+
+
+                                        </Grid>
+                                        <Grid x:Name="Dashbord_grid_1_Copy1" Margin="40,362,40,0" CornerRadius="25,25,25,25" RequestedTheme="Default" RenderTransformOrigin="0.5,0.5" Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Height="140" VerticalAlignment="Top">
+                                            <!-- Effet du Dock -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button ToolTipService.ToolTip="Thème et Couleur" ToolTipService.Placement="Bottom" CornerRadius="25,5,5,25" Margin="5,5,0,5" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Width="120">
+                                                <Viewbox MaxWidth="25" MaxHeight="25" Margin="-25,-25,-25,-25">
+                                                    <SymbolIcon Symbol="Highlight"/>
+                                                </Viewbox>
+                                            </Button>
+                                            <TextBlock Margin="130,5,5,0" Text="THEME ET COULEUR" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                                            <TextBlock Margin="130,32,5,0" Text="Vous pouvez mettre l'application et mode sombre ou claire, ainsi que accédez au paramètrage des couleurs de votre système..." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                                            <Button x:Name="M_ViewThemeAndColors" Content="Accéder &gt;" Margin="0,0,10,10" CornerRadius="10" HorizontalAlignment="Right" Width="148" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Bottom" Height="30" BorderThickness="1" Click="M_ViewThemeAndColors_Click"/>
+
+
+
+                                        </Grid>
+                                        <Grid x:Name="Dashbord_grid_1_Copy2" Margin="40,507,40,0" CornerRadius="25,25,25,25" RequestedTheme="Default" RenderTransformOrigin="0.5,0.5" Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Height="140" VerticalAlignment="Top">
+                                            <!-- Effet du Dock -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button ToolTipService.ToolTip="Audio de l'application" ToolTipService.Placement="Bottom" CornerRadius="25,5,5,25" Margin="5,5,0,5" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Width="120">
+                                                <Viewbox MaxWidth="25" MaxHeight="25" Margin="-25,-25,-25,-25">
+                                                    <SymbolIcon Symbol="Volume"/>
+                                                </Viewbox>
+                                            </Button>
+                                            <TextBlock Margin="130,5,5,0" Text="AUDIO DE L'APPLICATION" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                                            <TextBlock Margin="130,32,5,0" Text="Activez, réglez l'audio de l'application dès maintenant..." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                                            <Button x:Name="M_ViewSonds" Content="Accéder &gt;" Margin="0,0,10,10" CornerRadius="10" HorizontalAlignment="Right" Width="148" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Bottom" Height="30" BorderThickness="1" Click="M_ViewSonds_Click"/>
+
+
+
+                                        </Grid>
+                                        <Grid x:Name="Dashbord_grid_1_Copy3" Margin="40,652,40,0" CornerRadius="25,25,25,25" RequestedTheme="Default" RenderTransformOrigin="0.5,0.5" Background="{ThemeResource SystemControlBaseMediumLowAcrylicElementMediumBrush}" Height="140" VerticalAlignment="Top">
+                                            <!-- Effet du Dock -->
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button ToolTipService.ToolTip="Site support" ToolTipService.Placement="Bottom" CornerRadius="25,5,5,25" Margin="5,5,0,5" BorderThickness="1" Background="Transparent" Style="{StaticResource ButtonRevealStyle}" VerticalAlignment="Stretch" Width="120">
+                                                <Viewbox MaxWidth="25" MaxHeight="25" Margin="-25,-25,-25,-25">
+                                                    <SymbolIcon Symbol="PreviewLink"/>
+                                                </Viewbox>
+                                            </Button>
+                                            <TextBlock Margin="130,5,5,0" Text="SITE SUPPORT" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+                                            <TextBlock Margin="130,32,5,0" Text="Vous pouvez désormais allez sur le site support de l'application, ou même accédez au site de la version bureautique." TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                                            <HyperlinkButton x:Name="SSA" Content="SITE SUPPORT (APPLICATION)" NavigateUri="https://mnd-uwp.sidl-corporation.fr/" Margin="0,0,15,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="32" Click="SSA_Click" />
+                                            <HyperlinkButton x:Name="SSL" Content="SITE SUPPORT (LOGICIEL)" NavigateUri="https://mnd-for-desktop.sidl-corporation.fr/" Margin="0,0,209,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="32" Click="SSL_Click" />
+
+
+                                        </Grid>
+                                        <Grid HorizontalAlignment="Left" Margin="10,0,0,10" Width="388" Height="28" VerticalAlignment="Bottom" CornerRadius="5,5,5,5">
+                                            <Grid.Background>
+                                                <AcrylicBrush BackgroundSource="Backdrop" TintColor="#CC000000" TintOpacity="0.55"/>
+                                            </Grid.Background>
+                                            <TextBlock x:Name="TXT_DASHBORD_VERSION_APP" Margin="10,8,14,10" Text="LOADING{APP_VERSION}" TextWrapping="Wrap" FontSize="8" FontFamily="Arial Black" FontWeight="Bold" Foreground="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}"/>
+                                        </Grid>
+                                    </Grid>
+                                </StackPanel>
+                            </ScrollViewer>
+
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:Name="PI_NEWS" Margin="0,-2,0,0" Header="| 📢 · ACTUALITÉES">
+                        <Grid>
+                            <ListView x:Name="RSSList" ItemsSource="{x:Bind Path=RSSFeed}" SelectionChanged="RSSList_SelectionChanged">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate x:Name="RSSchema" x:DataType="rss:RssSchema">
+                                        <StackPanel Padding="10">
+                                            <TextBlock x:Name="RSS_TITLE" Text="{x:Bind Path=Title}" FontSize="18" FontWeight="Bold" TextWrapping="WrapWholeWords" FocusVisualPrimaryBrush="{ThemeResource SystemControlAccentDark2AcrylicElementAccentDark2MediumHighBrush}" Foreground="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}"/>
+                                            <TextBlock x:Name="RSS_AUTHOR" Text="{x:Bind Path=Author}" FontSize="10" TextWrapping="WrapWholeWords" FontStyle="Italic" Foreground="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}"/>
+                                            <TextBlock x:Name="RSS_PUBLISH_DATE" Text="{x:Bind Path=PublishDate}" FontSize="10" TextWrapping="WrapWholeWords" FontStyle="Italic"/>
+                                            <TextBlock x:Name="RSS_SUMMARY" Text="{x:Bind Path=Summary}" TextWrapping="WrapWholeWords"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+                    </PivotItem>
+                    <PivotItem x:Name="PI_LOCALISATION" Margin="0,-2,0,0" Header="| 🗺 · CARTOGRAPHIE">
+                        <Grid>
+                            <Grid Margin="0,0,0,0">
+                                <Grid.FocusVisualPrimaryBrush>
+                                    <AcrylicBrush TintColor="#CC000000" BackgroundSource="HostBackdrop" TintOpacity="0.55"/>
+                                </Grid.FocusVisualPrimaryBrush>
+                                <Custom:MapControl x:Name="MAP" Style="{Binding SelectedItem.Content, ElementName=styleCombobox}" ZoomInteractionMode="GestureAndControl" TiltInteractionMode="GestureAndControl" MapServiceToken="wcklKBaJekuIwGC7dAYw~wZIOwg3KY8QZNxtc-ZVpgw~AnvptMcmzRusLY4o19HWQ1RjTNTp_HJV1DiOXVDFdHjjGjVMFGYjBs14UykKG_1I" Loaded="MAP_Loaded" RotateInteractionMode="GestureAndControl"/>
+                                <Grid Margin="10,0,0,10" Height="226" VerticalAlignment="Bottom" CornerRadius="15,15,15,15" HorizontalAlignment="Left" Width="240" RequestedTheme="Dark">
+                                    <Grid.Background>
+                                        <AcrylicBrush FallbackColor="#66000000" TintColor="Black" TintOpacity="0.25" BackgroundSource="Backdrop"/>
+                                    </Grid.Background>
+                                    <CheckBox Content="Trafic routier de la carte" x:Name="trafficFlowVisibleCheckBox" Checked="TrafficFlowVisible_Checked"  Unchecked="trafficFlowVisibleCheckBox_Unchecked" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" RequestedTheme="Dark" />
+                                    <ComboBox Header="Style de la carte :" x:Name="styleCombobox" SelectionChanged="styleCombobox_SelectionChanged" Margin="10,42,10,0" CornerRadius="5,5,5,5" BorderThickness="1" HorizontalAlignment="Stretch" RequestedTheme="Dark">
+                                        <ComboBoxItem Content="Route"/>
+                                        <ComboBoxItem IsSelected="True" Content="Satellite"/>
+                                        <ComboBoxItem Content="Satellite (vue 3D)"/>
+                                        <ComboBoxItem Content="Satellite avec Routes"/>
+                                        <ComboBoxItem Content="Satellite avec Routes (vue 3D)"/>
+                                        <ComboBoxItem Content="Terrain"/>
+                                    </ComboBox>
+                                    <ComboBox Header="Affichage de la carte :" x:Name="projectionCombobox" SelectionChanged="projectionCombobox_SelectionChanged" Margin="10,102,10,0" CornerRadius="5,5,5,5" BorderThickness="1" RequestedTheme="Dark" HorizontalAlignment="Stretch" Height="55">
+                                        <ComboBoxItem IsSelected="True" Content="Web Mercator"/>
+                                        <ComboBoxItem Content="Globe"/>
+                                    </ComboBox>
+                                    <ComboBox Header="Couleur de la carte :" x:Name="colorshemaCombobox" Margin="10,161,10,0" CornerRadius="5,5,5,5" BorderThickness="1" RequestedTheme="Dark" HorizontalAlignment="Stretch" Height="55" SelectionChanged="colorshemaCombobox_SelectionChanged">
+                                        <ComboBoxItem IsSelected="True" Content="Jour"/>
+                                        <ComboBoxItem Content="Nuit"/>
+                                    </ComboBox>
+
+                                </Grid>
+                                <Grid Margin="0,10,10,0" CornerRadius="15,15,15,15" Height="143" VerticalAlignment="Top" HorizontalAlignment="Right" Width="471" Visibility="Collapsed">
+                                    <Grid.Background>
+                                        <AcrylicBrush FallbackColor="#66FFFFFF" TintColor="Black" TintOpacity="0.5"/>
+                                    </Grid.Background>
+                                    <TextBlock x:Name="InputTextBlock"  TextWrapping="Wrap" Text="L'API de géolocalisation permet à l'application de suivre en continu la position de l'appareil en fonction de la distance ou de la périodicité." Margin="10,10,10,0" Height="41" VerticalAlignment="Top" />
+                                    <Button x:Name="StopTrackingButton"  Content="Arrêter le suivi" Margin="10,52,10,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" CornerRadius="5,5,5,5"/>
+
+
+                                    <TextBlock TextWrapping="Wrap" x:Name="LocationDisabledMessage" Margin="10,0,10,10" FontStyle="Italic" Visibility="Visible" Height="42" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="Red"><Run Text="L'application ne parvient pas à obtenir les données de localisation. Accédez aux " /><Run Text=" "/><Hyperlink NavigateUri="ms-settings:privacy-location"><Run Text="paramètres" /></Hyperlink><Run Text=" "/><Run Text=" pour vérifier les autorisations de localisation."/></TextBlock>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </PivotItem>
+
+                </Pivot>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  IgnorableNamespaces="uap mp uap4 iot uap3 uap6">
+
+  <Identity
+    Name="20019SIDLCorp.MANAGERNETWORKDETECTOR2020"
+    Publisher="CN=827F469E-81AF-4DB9-B0BD-92EBCB854296"
+    Version="10.6.1.0" />
+
+  <mp:PhoneIdentity PhoneProductId="e0066abe-9673-4a8e-ae25-f8597be92f44" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>MANAGER NETWORK DETECTOR (2020)</DisplayName>
+    <PublisherDisplayName>SIDL CORPORATION</PublisherDisplayName>
+    <Logo>Assets\AppsIcone\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="MANAGER_NETWORK_DETECTOR.App">
+      <uap:VisualElements
+        DisplayName="MANAGER NETWORK DETECTOR™"
+        Square150x150Logo="Assets\AppsIcone\Square150x150Logo.png"
+        Square44x44Logo="Assets\AppsIcone\Square44x44Logo.png"
+        Description="MANAGER NETWORK DETECTOR™ For Windows 10 Apps et une application dédié à récupéré toutes information réseaux de votre appareils exécutant l&apos;application sur Windows 10. Cette application et la version originale et la version officiel de MANAGER NETWORK DETECTOR pour Windows 10 en version application Universal Windows Plateforms."
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\AppsIcone\Wide310x150Logo.png" ShortName="MANAGER NETWORK DETECTOR™" Square71x71Logo="Assets\AppsIcone\SmallTile.png" Square310x310Logo="Assets\AppsIcone\LargeTile.png">
+          <uap:TileUpdate UriTemplate="https://news.google.com/rss?hl=fr" Recurrence="halfHour"/>
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\AppsIcone\SplashScreen.png"  BackgroundColor="royalBlue"/>
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="portraitFlipped"/></uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\AppsIcone\BadgeLogo.png" Notification="badgeAndTileText"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap4:Capability Name="offlineMapsManagement"/>
+    <iot:Capability Name="systemManagement"/>
+    <uap:Capability Name="userAccountInformation"/>
+    <uap:Capability Name="removableStorage"/>
+    <Capability Name="privateNetworkClientServer"/>
+    <uap4:Capability Name="userDataTasks"/>
+    <Capability Name="internetClientServer"/>
+    <uap6:Capability Name="graphicsCapture"/>
+    <uap3:Capability Name="userNotificationListener"/>
+    <DeviceCapability Name="location"/>
+    <DeviceCapability Name="proximity"/>
+  </Capabilities>
+</Package>
