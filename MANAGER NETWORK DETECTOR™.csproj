@@ -1,0 +1,1129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0B3C33E4-D947-44DB-86B2-741555213192}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MANAGER_NETWORK_DETECTOR_</RootNamespace>
+    <AssemblyName>MANAGER NETWORK DETECTOR™</AssemblyName>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>F51262A3E130B122847EEC7EAACB23E7D3B9BA5A</PackageCertificateThumbprint>
+    <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <AppInstallerUri>https://www.mnd-windows10.tk</AppInstallerUri>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AboutApp.xaml.cs">
+      <DependentUpon>AboutApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="audioapps.xaml.cs">
+      <DependentUpon>audioapps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSettings.xaml.cs">
+      <DependentUpon>HomeSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Library.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="network.xaml.cs">
+      <DependentUpon>network.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAppsAvanced.xaml.cs">
+      <DependentUpon>SystemAppsAvanced.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\bg.jpg" />
+    <Content Include="Assets\Icones\icons8-24-dernières-heures-500.png" />
+    <Content Include="Assets\Icones\icons8-500.png" />
+    <Content Include="Assets\Icones\icons8-a-faire-500.png" />
+    <Content Include="Assets\Icones\icons8-accord-500.png" />
+    <Content Include="Assets\Icones\icons8-accord-comme-500.png" />
+    <Content Include="Assets\Icones\icons8-accueil-500.png" />
+    <Content Include="Assets\Icones\icons8-actions-500.png" />
+    <Content Include="Assets\Icones\icons8-ad-blocker-500.png" />
+    <Content Include="Assets\Icones\icons8-adresse-500.png" />
+    <Content Include="Assets\Icones\icons8-agiter-le-téléphone-500.png" />
+    <Content Include="Assets\Icones\icons8-agreement-delete-500.png" />
+    <Content Include="Assets\Icones\icons8-agreement-new-500.png" />
+    <Content Include="Assets\Icones\icons8-aide-500.png" />
+    <Content Include="Assets\Icones\icons8-aime-rempli-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-la-liste-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-le-fichier-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-un-employé-à-la-société-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-un-rappel-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-un-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-un-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-ajouter-une-règle-500.png" />
+    <Content Include="Assets\Icones\icons8-alarme-500.png" />
+    <Content Include="Assets\Icones\icons8-alarmes-500.png" />
+    <Content Include="Assets\Icones\icons8-alt-500.png" />
+    <Content Include="Assets\Icones\icons8-amélioration-500.png" />
+    <Content Include="Assets\Icones\icons8-amélioration-économique-500.png" />
+    <Content Include="Assets\Icones\icons8-analyse-de-la-croissance-financière-500.png" />
+    <Content Include="Assets\Icones\icons8-anniversaire-500.png" />
+    <Content Include="Assets\Icones\icons8-annuler-2-500.png" />
+    <Content Include="Assets\Icones\icons8-annuler-500-2.png" />
+    <Content Include="Assets\Icones\icons8-annuler-500.png" />
+    <Content Include="Assets\Icones\icons8-api-500.png" />
+    <Content Include="Assets\Icones\icons8-appareil-gps-500.png" />
+    <Content Include="Assets\Icones\icons8-appel-video-500.png" />
+    <Content Include="Assets\Icones\icons8-appointment-scheduling-500.png" />
+    <Content Include="Assets\Icones\icons8-approbation-500.png" />
+    <Content Include="Assets\Icones\icons8-approuver-500.png" />
+    <Content Include="Assets\Icones\icons8-argent-vôtre-500.png" />
+    <Content Include="Assets\Icones\icons8-arrière-500.png" />
+    <Content Include="Assets\Icones\icons8-arrêter-le-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-arrêter-le-rapport-du-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-assistant-500.png" />
+    <Content Include="Assets\Icones\icons8-attach-resume-female-500.png" />
+    <Content Include="Assets\Icones\icons8-attach-resume-male-500.png" />
+    <Content Include="Assets\Icones\icons8-attirer-500.png" />
+    <Content Include="Assets\Icones\icons8-attract-customers-500.png" />
+    <Content Include="Assets\Icones\icons8-aucune-idée-500.png" />
+    <Content Include="Assets\Icones\icons8-audio-cable-500.png" />
+    <Content Include="Assets\Icones\icons8-audit-500.png" />
+    <Content Include="Assets\Icones\icons8-aujourd%27hui-500.png" />
+    <Content Include="Assets\Icones\icons8-autorisation-de-retour-de-marchandise-500.png" />
+    <Content Include="Assets\Icones\icons8-avertissement-500.png" />
+    <Content Include="Assets\Icones\icons8-b2b-500.png" />
+    <Content Include="Assets\Icones\icons8-badge-500.png" />
+    <Content Include="Assets\Icones\icons8-badge-d%27employé-500.png" />
+    <Content Include="Assets\Icones\icons8-baissier-500.png" />
+    <Content Include="Assets\Icones\icons8-bank-safe-500.png" />
+    <Content Include="Assets\Icones\icons8-bannière-500.png" />
+    <Content Include="Assets\Icones\icons8-base-de-données-500.png" />
+    <Content Include="Assets\Icones\icons8-bavarder-500.png" />
+    <Content Include="Assets\Icones\icons8-blockchain-500.png" />
+    <Content Include="Assets\Icones\icons8-blockchain-new-logo-500.png" />
+    <Content Include="Assets\Icones\icons8-blockchain-technology-500.png" />
+    <Content Include="Assets\Icones\icons8-blog-500.png" />
+    <Content Include="Assets\Icones\icons8-bonne-décision-500.png" />
+    <Content Include="Assets\Icones\icons8-bourse-500.png" />
+    <Content Include="Assets\Icones\icons8-boussole-500.png" />
+    <Content Include="Assets\Icones\icons8-boutique-500.png" />
+    <Content Include="Assets\Icones\icons8-boîte-500.png" />
+    <Content Include="Assets\Icones\icons8-boîte-aux-lettres-fermée-pleine-500.png" />
+    <Content Include="Assets\Icones\icons8-boîte-à-idées-500.png" />
+    <Content Include="Assets\Icones\icons8-brainstorm-500.png" />
+    <Content Include="Assets\Icones\icons8-briefcase-settings-500.png" />
+    <Content Include="Assets\Icones\icons8-bug-500.png" />
+    <Content Include="Assets\Icones\icons8-bulle-500.png" />
+    <Content Include="Assets\Icones\icons8-bulle-de-conversation-avec-points-500.png" />
+    <Content Include="Assets\Icones\icons8-bureau-500.png" />
+    <Content Include="Assets\Icones\icons8-business-documentation-500.png" />
+    <Content Include="Assets\Icones\icons8-business-model-canvas-500.png" />
+    <Content Include="Assets\Icones\icons8-business-network-500.png" />
+    <Content Include="Assets\Icones\icons8-business-report-500.png" />
+    <Content Include="Assets\Icones\icons8-cadenas-500.png" />
+    <Content Include="Assets\Icones\icons8-caisse-à-outils-500.png" />
+    <Content Include="Assets\Icones\icons8-calendrier-500.png" />
+    <Content Include="Assets\Icones\icons8-camembert-500.png" />
+    <Content Include="Assets\Icones\icons8-caméra-bullet-500.png" />
+    <Content Include="Assets\Icones\icons8-canaux-de-vente-500.png" />
+    <Content Include="Assets\Icones\icons8-carnet-d%27adresses-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-balisée-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-d%27identité-électronique-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-de-points-chauds-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-de-présence-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-du-monde-500-2.png" />
+    <Content Include="Assets\Icones\icons8-carte-du-monde-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-mentale-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-mère-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-sim-500.png" />
+    <Content Include="Assets\Icones\icons8-carte-vidéo-500.png" />
+    <Content Include="Assets\Icones\icons8-case-cochée-500.png" />
+    <Content Include="Assets\Icones\icons8-case-à-cocher-non-cochée-500.png" />
+    <Content Include="Assets\Icones\icons8-case-à-cocher-vérifiée-500.png" />
+    <Content Include="Assets\Icones\icons8-cdi-500.png" />
+    <Content Include="Assets\Icones\icons8-ce-que-je-fais-500.png" />
+    <Content Include="Assets\Icones\icons8-cent-500.png" />
+    <Content Include="Assets\Icones\icons8-cercle-non-coché-500.png" />
+    <Content Include="Assets\Icones\icons8-chandeliers-500.png" />
+    <Content Include="Assets\Icones\icons8-chercher-500.png" />
+    <Content Include="Assets\Icones\icons8-chevron-bas-500.png" />
+    <Content Include="Assets\Icones\icons8-chevron-droit-500.png" />
+    <Content Include="Assets\Icones\icons8-chronologie-500.png" />
+    <Content Include="Assets\Icones\icons8-chronologie-verticale-500.png" />
+    <Content Include="Assets\Icones\icons8-chèque-de-paie-500.png" />
+    <Content Include="Assets\Icones\icons8-chèque-sans-provision-500.png" />
+    <Content Include="Assets\Icones\icons8-citation-à-gauche-500.png" />
+    <Content Include="Assets\Icones\icons8-clavier-500.png" />
+    <Content Include="Assets\Icones\icons8-clavier-numérique-500.png" />
+    <Content Include="Assets\Icones\icons8-client-linux-500.png" />
+    <Content Include="Assets\Icones\icons8-client-léger-500.png" />
+    <Content Include="Assets\Icones\icons8-client-mac-500.png" />
+    <Content Include="Assets\Icones\icons8-client-société-500.png" />
+    <Content Include="Assets\Icones\icons8-climate-change-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-backup-restore-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-barré-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-business-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-file-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-folder-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-link-500.png" />
+    <Content Include="Assets\Icones\icons8-cloud-sync-500.png" />
+    <Content Include="Assets\Icones\icons8-clé-500.png" />
+    <Content Include="Assets\Icones\icons8-clés-2-500.png" />
+    <Content Include="Assets\Icones\icons8-coche-500.png" />
+    <Content Include="Assets\Icones\icons8-cochez-toutes-les-500.png" />
+    <Content Include="Assets\Icones\icons8-code-500.png" />
+    <Content Include="Assets\Icones\icons8-code-source-500.png" />
+    <Content Include="Assets\Icones\icons8-coeurs-500.png" />
+    <Content Include="Assets\Icones\icons8-collaboration-500.png" />
+    <Content Include="Assets\Icones\icons8-collecter-500.png" />
+    <Content Include="Assets\Icones\icons8-commentaires-500.png" />
+    <Content Include="Assets\Icones\icons8-commentaires-du-présentateur-500.png" />
+    <Content Include="Assets\Icones\icons8-commentaires-du-présentateur-désactivés-500.png" />
+    <Content Include="Assets\Icones\icons8-communication-500.png" />
+    <Content Include="Assets\Icones\icons8-compagnies-associées-500.png" />
+    <Content Include="Assets\Icones\icons8-complaint-500.png" />
+    <Content Include="Assets\Icones\icons8-complaints-500.png" />
+    <Content Include="Assets\Icones\icons8-comptabilité-500.png" />
+    <Content Include="Assets\Icones\icons8-comptabilité-par-fonds-500.png" />
+    <Content Include="Assets\Icones\icons8-compte-vérifié-500.png" />
+    <Content Include="Assets\Icones\icons8-concept-500.png" />
+    <Content Include="Assets\Icones\icons8-confiance-500.png" />
+    <Content Include="Assets\Icones\icons8-configuration-des-données-500.png" />
+    <Content Include="Assets\Icones\icons8-confiserie-500.png" />
+    <Content Include="Assets\Icones\icons8-conflit-500.png" />
+    <Content Include="Assets\Icones\icons8-conflit-d%27événement-récurrent-500.png" />
+    <Content Include="Assets\Icones\icons8-conférence-500.png" />
+    <Content Include="Assets\Icones\icons8-conférence-téléphonique-500.png" />
+    <Content Include="Assets\Icones\icons8-conférence-vidéo-500.png" />
+    <Content Include="Assets\Icones\icons8-connaissance-client-500.png" />
+    <Content Include="Assets\Icones\icons8-connexion-500.png" />
+    <Content Include="Assets\Icones\icons8-connexion-usb-500.png" />
+    <Content Include="Assets\Icones\icons8-console-500.png" />
+    <Content Include="Assets\Icones\icons8-contact-d%27affaires-500.png" />
+    <Content Include="Assets\Icones\icons8-contact-de-messagerie-500.png" />
+    <Content Include="Assets\Icones\icons8-contact-téléphonique-500.png" />
+    <Content Include="Assets\Icones\icons8-contacts-500.png" />
+    <Content Include="Assets\Icones\icons8-contrat-de-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-contrôle-des-crédits-500.png" />
+    <Content Include="Assets\Icones\icons8-copie-500.png" />
+    <Content Include="Assets\Icones\icons8-copyleft-500.png" />
+    <Content Include="Assets\Icones\icons8-copyright-500.png" />
+    <Content Include="Assets\Icones\icons8-couronne-500.png" />
+    <Content Include="Assets\Icones\icons8-cover-up-500.png" />
+    <Content Include="Assets\Icones\icons8-coworking-500.png" />
+    <Content Include="Assets\Icones\icons8-craft-work-500.png" />
+    <Content Include="Assets\Icones\icons8-creating-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-all-rights-reserved-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-by-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-commercial-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-nc-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-nd-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-pd-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-remix-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-sa-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-share-500.png" />
+    <Content Include="Assets\Icones\icons8-creative-commons-zero-500.png" />
+    <Content Include="Assets\Icones\icons8-credit-card-500.png" />
+    <Content Include="Assets\Icones\icons8-croissance-personnelle-500.png" />
+    <Content Include="Assets\Icones\icons8-créativité-500.png" />
+    <Content Include="Assets\Icones\icons8-créer-un-nouveau-500.png" />
+    <Content Include="Assets\Icones\icons8-ctrl-500.png" />
+    <Content Include="Assets\Icones\icons8-curly-arrow-500.png" />
+    <Content Include="Assets\Icones\icons8-curseur-500-2.png" />
+    <Content Include="Assets\Icones\icons8-curseur-500.png" />
+    <Content Include="Assets\Icones\icons8-curseur-main-500.png" />
+    <Content Include="Assets\Icones\icons8-customer-insights-manager-500.png" />
+    <Content Include="Assets\Icones\icons8-decision-making-500.png" />
+    <Content Include="Assets\Icones\icons8-demande-500.png" />
+    <Content Include="Assets\Icones\icons8-demande-d’argent-500.png" />
+    <Content Include="Assets\Icones\icons8-demander-un-service-500.png" />
+    <Content Include="Assets\Icones\icons8-dette-500.png" />
+    <Content Include="Assets\Icones\icons8-diagramme-500.png" />
+    <Content Include="Assets\Icones\icons8-diagramme-de-gantt-500.png" />
+    <Content Include="Assets\Icones\icons8-diagramme-de-venn-500.png" />
+    <Content Include="Assets\Icones\icons8-diamond-care-500.png" />
+    <Content Include="Assets\Icones\icons8-document-de-stratégie-de-vente-500.png" />
+    <Content Include="Assets\Icones\icons8-documents-500.png" />
+    <Content Include="Assets\Icones\icons8-dollar-bitcoin-exchange-500.png" />
+    <Content Include="Assets\Icones\icons8-domaine-500.png" />
+    <Content Include="Assets\Icones\icons8-don-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-d%27archive-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-de-photos-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-favori-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-musique-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-ouvert-500.png" />
+    <Content Include="Assets\Icones\icons8-dossier-porno-500.png" />
+    <Content Include="Assets\Icones\icons8-droit-d%27auteur-pour-enregistrement-sonore-500.png" />
+    <Content Include="Assets\Icones\icons8-droite-500.png" />
+    <Content Include="Assets\Icones\icons8-dynamique-négative-500.png" />
+    <Content Include="Assets\Icones\icons8-dynamique-positive-500.png" />
+    <Content Include="Assets\Icones\icons8-décalage-500.png" />
+    <Content Include="Assets\Icones\icons8-décision-500.png" />
+    <Content Include="Assets\Icones\icons8-décision-neutre-500.png" />
+    <Content Include="Assets\Icones\icons8-déconnexion-arrondi-500.png" />
+    <Content Include="Assets\Icones\icons8-définir-un-lieu-500.png" />
+    <Content Include="Assets\Icones\icons8-département-500.png" />
+    <Content Include="Assets\Icones\icons8-dépôt-500.png" />
+    <Content Include="Assets\Icones\icons8-désapprouver-500.png" />
+    <Content Include="Assets\Icones\icons8-echap-500.png" />
+    <Content Include="Assets\Icones\icons8-editer-le-fichier-500.png" />
+    <Content Include="Assets\Icones\icons8-effacer-500-2.png" />
+    <Content Include="Assets\Icones\icons8-effacer-500.png" />
+    <Content Include="Assets\Icones\icons8-emplacement-500.png" />
+    <Content Include="Assets\Icones\icons8-emploi-500.png" />
+    <Content Include="Assets\Icones\icons8-empreinte-digitale-500.png" />
+    <Content Include="Assets\Icones\icons8-en-haut-500.png" />
+    <Content Include="Assets\Icones\icons8-enquête-500.png" />
+    <Content Include="Assets\Icones\icons8-enregistrer-sous-500.png" />
+    <Content Include="Assets\Icones\icons8-enterprise-resource-planning-500.png" />
+    <Content Include="Assets\Icones\icons8-entretien-500.png" />
+    <Content Include="Assets\Icones\icons8-entrées-multiples-500.png" />
+    <Content Include="Assets\Icones\icons8-envoyé-500.png" />
+    <Content Include="Assets\Icones\icons8-epingle-de-carte-500.png" />
+    <Content Include="Assets\Icones\icons8-erreur-500.png" />
+    <Content Include="Assets\Icones\icons8-estimations-500.png" />
+    <Content Include="Assets\Icones\icons8-ethernet-off-500.png" />
+    <Content Include="Assets\Icones\icons8-ethernet-on-500.png" />
+    <Content Include="Assets\Icones\icons8-euro-500.png" />
+    <Content Include="Assets\Icones\icons8-expand-influence-500.png" />
+    <Content Include="Assets\Icones\icons8-expiré-500.png" />
+    <Content Include="Assets\Icones\icons8-exporter-500.png" />
+    <Content Include="Assets\Icones\icons8-exposant-500.png" />
+    <Content Include="Assets\Icones\icons8-facebook-500.png" />
+    <Content Include="Assets\Icones\icons8-faire-tourner-500.png" />
+    <Content Include="Assets\Icones\icons8-faire-un-don-500.png" />
+    <Content Include="Assets\Icones\icons8-faq-500.png" />
+    <Content Include="Assets\Icones\icons8-fast-food-drive-thru-500.png" />
+    <Content Include="Assets\Icones\icons8-fb-2-500.png" />
+    <Content Include="Assets\Icones\icons8-female-working-with-a-laptop-500.png" />
+    <Content Include="Assets\Icones\icons8-femme-d%27affaires-500.png" />
+    <Content Include="Assets\Icones\icons8-fermer-500.png" />
+    <Content Include="Assets\Icones\icons8-fermer-la-fenêtre-500.png" />
+    <Content Include="Assets\Icones\icons8-fermer-le-volet-500.png" />
+    <Content Include="Assets\Icones\icons8-fermer-position-500.png" />
+    <Content Include="Assets\Icones\icons8-fichier-500.png" />
+    <Content Include="Assets\Icones\icons8-fichier-de-code-500.png" />
+    <Content Include="Assets\Icones\icons8-fichier-image-500.png" />
+    <Content Include="Assets\Icones\icons8-fichier-symlink-500.png" />
+    <Content Include="Assets\Icones\icons8-fichier-vidéo-500.png" />
+    <Content Include="Assets\Icones\icons8-filtre-500.png" />
+    <Content Include="Assets\Icones\icons8-financial-analytics-500.png" />
+    <Content Include="Assets\Icones\icons8-financial-changes-500.png" />
+    <Content Include="Assets\Icones\icons8-financial-tasks-500.png" />
+    <Content Include="Assets\Icones\icons8-flip-chart-500.png" />
+    <Content Include="Assets\Icones\icons8-flipboard-500.png" />
+    <Content Include="Assets\Icones\icons8-flux-de-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-flux-de-trésorerie-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-bas-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-droite-500-2.png" />
+    <Content Include="Assets\Icones\icons8-flèche-droite-500-3.png" />
+    <Content Include="Assets\Icones\icons8-flèche-droite-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-développer-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-gauche-500-2.png" />
+    <Content Include="Assets\Icones\icons8-flèche-gauche-500-3.png" />
+    <Content Include="Assets\Icones\icons8-flèche-gauche-500-4.png" />
+    <Content Include="Assets\Icones\icons8-flèche-gauche-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-réduire-500.png" />
+    <Content Include="Assets\Icones\icons8-flèche-répondre-500.png" />
+    <Content Include="Assets\Icones\icons8-formulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-fourche-de-code-500.png" />
+    <Content Include="Assets\Icones\icons8-fournisseur-500.png" />
+    <Content Include="Assets\Icones\icons8-franchise-500.png" />
+    <Content Include="Assets\Icones\icons8-full-recycle-bin-500.png" />
+    <Content Include="Assets\Icones\icons8-fusionner-horizontalement-500.png" />
+    <Content Include="Assets\Icones\icons8-fusionner-verticalement-500.png" />
+    <Content Include="Assets\Icones\icons8-garantie-500-2.png" />
+    <Content Include="Assets\Icones\icons8-garantie-500.png" />
+    <Content Include="Assets\Icones\icons8-gauche-500.png" />
+    <Content Include="Assets\Icones\icons8-gestion-de-projet-500.png" />
+    <Content Include="Assets\Icones\icons8-gestion-des-clients-500.png" />
+    <Content Include="Assets\Icones\icons8-globe-500.png" />
+    <Content Include="Assets\Icones\icons8-globe-terrestre-500.png" />
+    <Content Include="Assets\Icones\icons8-golden-opportunity-500.png" />
+    <Content Include="Assets\Icones\icons8-google-plus-500.png" />
+    <Content Include="Assets\Icones\icons8-grand-livre-500.png" />
+    <Content Include="Assets\Icones\icons8-grand-livre-général-500.png" />
+    <Content Include="Assets\Icones\icons8-grand-master-key-500.png" />
+    <Content Include="Assets\Icones\icons8-graphique-camembert-500.png" />
+    <Content Include="Assets\Icones\icons8-graphique-combiné-500.png" />
+    <Content Include="Assets\Icones\icons8-graphique-en-ligne-500.png" />
+    <Content Include="Assets\Icones\icons8-graphique-en-zone-500.png" />
+    <Content Include="Assets\Icones\icons8-graphique-nuée-de-point-500.png" />
+    <Content Include="Assets\Icones\icons8-grocery-store-500.png" />
+    <Content Include="Assets\Icones\icons8-group-of-companies-500.png" />
+    <Content Include="Assets\Icones\icons8-group-task-500.png" />
+    <Content Include="Assets\Icones\icons8-groupe-de-projets-500.png" />
+    <Content Include="Assets\Icones\icons8-groupe-de-questions-500.png" />
+    <Content Include="Assets\Icones\icons8-growing-money-500.png" />
+    <Content Include="Assets\Icones\icons8-géorepérage-500.png" />
+    <Content Include="Assets\Icones\icons8-hard-working-500.png" />
+    <Content Include="Assets\Icones\icons8-haussier-500.png" />
+    <Content Include="Assets\Icones\icons8-haut-parleur-500.png" />
+    <Content Include="Assets\Icones\icons8-haute-priorité-500.png" />
+    <Content Include="Assets\Icones\icons8-hdd-500.png" />
+    <Content Include="Assets\Icones\icons8-herald-500-2.png" />
+    <Content Include="Assets\Icones\icons8-herald-500.png" />
+    <Content Include="Assets\Icones\icons8-heures-supplémentaires-500.png" />
+    <Content Include="Assets\Icones\icons8-histogramme-500.png" />
+    <Content Include="Assets\Icones\icons8-histogramme-de-distribution-normale-500.png" />
+    <Content Include="Assets\Icones\icons8-homme-d%27affaire-500.png" />
+    <Content Include="Assets\Icones\icons8-horloge-500.png" />
+    <Content Include="Assets\Icones\icons8-idée-500.png" />
+    <Content Include="Assets\Icones\icons8-image-500.png" />
+    <Content Include="Assets\Icones\icons8-image-de-marque-500.png" />
+    <Content Include="Assets\Icones\icons8-importer-500.png" />
+    <Content Include="Assets\Icones\icons8-impôts-500.png" />
+    <Content Include="Assets\Icones\icons8-incrustation-d%27image-500.png" />
+    <Content Include="Assets\Icones\icons8-incruste-500.png" />
+    <Content Include="Assets\Icones\icons8-indiquer-vue-comme-cachée-500.png" />
+    <Content Include="Assets\Icones\icons8-indiquer-vue-comme-non-cachée-500.png" />
+    <Content Include="Assets\Icones\icons8-info-500.png" />
+    <Content Include="Assets\Icones\icons8-information-500-2.png" />
+    <Content Include="Assets\Icones\icons8-information-500.png" />
+    <Content Include="Assets\Icones\icons8-information-pyramid-500.png" />
+    <Content Include="Assets\Icones\icons8-informations-sur-la-stratégie-500.png" />
+    <Content Include="Assets\Icones\icons8-initier-le-transfert-d’argent-500.png" />
+    <Content Include="Assets\Icones\icons8-innovation-500.png" />
+    <Content Include="Assets\Icones\icons8-insidea-500.png" />
+    <Content Include="Assets\Icones\icons8-inspection-500.png" />
+    <Content Include="Assets\Icones\icons8-instagram-500.png" />
+    <Content Include="Assets\Icones\icons8-instructions-de-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-insérez-la-clef-500.png" />
+    <Content Include="Assets\Icones\icons8-interface-utilisateur-naturelle-2-500.png" />
+    <Content Include="Assets\Icones\icons8-internet-500.png" />
+    <Content Include="Assets\Icones\icons8-internship-500.png" />
+    <Content Include="Assets\Icones\icons8-interrupteur-on-500.png" />
+    <Content Include="Assets\Icones\icons8-intimité-500.png" />
+    <Content Include="Assets\Icones\icons8-inverser-les-couleurs-500.png" />
+    <Content Include="Assets\Icones\icons8-invitation-500.png" />
+    <Content Include="Assets\Icones\icons8-invité-homme-500.png" />
+    <Content Include="Assets\Icones\icons8-iphone-spinner-500.png" />
+    <Content Include="Assets\Icones\icons8-itération-du-sprint-500.png" />
+    <Content Include="Assets\Icones\icons8-journal-500.png" />
+    <Content Include="Assets\Icones\icons8-jumelles-500.png" />
+    <Content Include="Assets\Icones\icons8-kiosque-de-self-sevice-500.png" />
+    <Content Include="Assets\Icones\icons8-knowledge-transfer-500.png" />
+    <Content Include="Assets\Icones\icons8-la-publicité-500.png" />
+    <Content Include="Assets\Icones\icons8-laisser-passer-de-sécurité-500.png" />
+    <Content Include="Assets\Icones\icons8-langue-500.png" />
+    <Content Include="Assets\Icones\icons8-learn-more-500.png" />
+    <Content Include="Assets\Icones\icons8-les-amériques-500.png" />
+    <Content Include="Assets\Icones\icons8-lien-500.png" />
+    <Content Include="Assets\Icones\icons8-lien-externe-500.png" />
+    <Content Include="Assets\Icones\icons8-lier-une-société-enfant-500.png" />
+    <Content Include="Assets\Icones\icons8-lier-une-société-parente-500.png" />
+    <Content Include="Assets\Icones\icons8-lire-le-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-lire-le-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-lire-un-message-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-de-choses-à-faire-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-de-souhaits-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-de-tâches-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-de-vérification-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-des-transactions-500.png" />
+    <Content Include="Assets\Icones\icons8-liste-récapitulative-500.png" />
+    <Content Include="Assets\Icones\icons8-livre-de-caisse-500.png" />
+    <Content Include="Assets\Icones\icons8-livre-important-500.png" />
+    <Content Include="Assets\Icones\icons8-livret-d%27épargne-500.png" />
+    <Content Include="Assets\Icones\icons8-logbook-500.png" />
+    <Content Include="Assets\Icones\icons8-logo-500.png" />
+    <Content Include="Assets\Icones\icons8-mail-500-2.png" />
+    <Content Include="Assets\Icones\icons8-mail-500.png" />
+    <Content Include="Assets\Icones\icons8-main-avec-stylo-500.png" />
+    <Content Include="Assets\Icones\icons8-mallette-500.png" />
+    <Content Include="Assets\Icones\icons8-man-with-money-500.png" />
+    <Content Include="Assets\Icones\icons8-management-500.png" />
+    <Content Include="Assets\Icones\icons8-management-en-développement-commercial-500.png" />
+    <Content Include="Assets\Icones\icons8-manager-500.png" />
+    <Content Include="Assets\Icones\icons8-marker-storm-500.png" />
+    <Content Include="Assets\Icones\icons8-marker-sun-500.png" />
+    <Content Include="Assets\Icones\icons8-marque-commercial-déposée-500.png" />
+    <Content Include="Assets\Icones\icons8-marque-commercial-enregistrée-500.png" />
+    <Content Include="Assets\Icones\icons8-marqueur-de-plan-500.png" />
+    <Content Include="Assets\Icones\icons8-mauvaise-décision-500.png" />
+    <Content Include="Assets\Icones\icons8-mauvaise-idée-500.png" />
+    <Content Include="Assets\Icones\icons8-menu-2-500.png" />
+    <Content Include="Assets\Icones\icons8-menu-500-2.png" />
+    <Content Include="Assets\Icones\icons8-menu-500.png" />
+    <Content Include="Assets\Icones\icons8-menu-utilisateur-femme-500.png" />
+    <Content Include="Assets\Icones\icons8-message-500.png" />
+    <Content Include="Assets\Icones\icons8-message-rempli-500.png" />
+    <Content Include="Assets\Icones\icons8-message-vidéo-500.png" />
+    <Content Include="Assets\Icones\icons8-messaging-500.png" />
+    <Content Include="Assets\Icones\icons8-minuteur-500.png" />
+    <Content Include="Assets\Icones\icons8-mise-en-page-de-la-diapositive-500.png" />
+    <Content Include="Assets\Icones\icons8-mises-à-jour-disponibles-500.png" />
+    <Content Include="Assets\Icones\icons8-mission-d%27une-entreprise-500.png" />
+    <Content Include="Assets\Icones\icons8-modifier-500-2.png" />
+    <Content Include="Assets\Icones\icons8-modifier-500.png" />
+    <Content Include="Assets\Icones\icons8-modifier-la-propriété-500-2.png" />
+    <Content Include="Assets\Icones\icons8-modifier-la-propriété-500.png" />
+    <Content Include="Assets\Icones\icons8-modifier-le-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-modifier-le-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-module-500.png" />
+    <Content Include="Assets\Icones\icons8-money-circulation-500.png" />
+    <Content Include="Assets\Icones\icons8-moniteur-500.png" />
+    <Content Include="Assets\Icones\icons8-montre-500-2.png" />
+    <Content Include="Assets\Icones\icons8-montre-500.png" />
+    <Content Include="Assets\Icones\icons8-mot-de-passe-500-2.png" />
+    <Content Include="Assets\Icones\icons8-mot-de-passe-500.png" />
+    <Content Include="Assets\Icones\icons8-musique-500.png" />
+    <Content Include="Assets\Icones\icons8-name-tag-woman-500.png" />
+    <Content Include="Assets\Icones\icons8-name-tag-woman-horizontal-500.png" />
+    <Content Include="Assets\Icones\icons8-newspaper-500.png" />
+    <Content Include="Assets\Icones\icons8-no-hidden-fee-british-pound-500.png" />
+    <Content Include="Assets\Icones\icons8-non-applicable-500.png" />
+    <Content Include="Assets\Icones\icons8-non-profit-organisation-500.png" />
+    <Content Include="Assets\Icones\icons8-note-500.png" />
+    <Content Include="Assets\Icones\icons8-note-de-service-500.png" />
+    <Content Include="Assets\Icones\icons8-noticeboard-500.png" />
+    <Content Include="Assets\Icones\icons8-nouveau-contact-500.png" />
+    <Content Include="Assets\Icones\icons8-nouveau-magasin-500.png" />
+    <Content Include="Assets\Icones\icons8-nouveau-message-500.png" />
+    <Content Include="Assets\Icones\icons8-nouveau-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelle-diapositive-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelle-entreprise-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelles-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelles-en-temps-réel-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelles-europe-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelles-royaume-uni-500.png" />
+    <Content Include="Assets\Icones\icons8-nouvelles-usa-500.png" />
+    <Content Include="Assets\Icones\icons8-nuage-500.png" />
+    <Content Include="Assets\Icones\icons8-négociation-neutre-500.png" />
+    <Content Include="Assets\Icones\icons8-objectif-500.png" />
+    <Content Include="Assets\Icones\icons8-office-500.png" />
+    <Content Include="Assets\Icones\icons8-ok-500.png" />
+    <Content Include="Assets\Icones\icons8-omnicanal-500.png" />
+    <Content Include="Assets\Icones\icons8-omnichannel-500.png" />
+    <Content Include="Assets\Icones\icons8-opérations-en-parallèle-500.png" />
+    <Content Include="Assets\Icones\icons8-ordinateur-500-2.png" />
+    <Content Include="Assets\Icones\icons8-ordinateur-500.png" />
+    <Content Include="Assets\Icones\icons8-ordinateur-portable-500.png" />
+    <Content Include="Assets\Icones\icons8-organigramme-500.png" />
+    <Content Include="Assets\Icones\icons8-organigramme-empilé-500.png" />
+    <Content Include="Assets\Icones\icons8-organisation-500.png" />
+    <Content Include="Assets\Icones\icons8-organization-chart-people-500.png" />
+    <Content Include="Assets\Icones\icons8-outils-administratifs-500.png" />
+    <Content Include="Assets\Icones\icons8-ouvrez-le-volet-500.png" />
+    <Content Include="Assets\Icones\icons8-ouvrir-500.png" />
+    <Content Include="Assets\Icones\icons8-ouvrir-l%27archive-500.png" />
+    <Content Include="Assets\Icones\icons8-page-d’accueil-500.png" />
+    <Content Include="Assets\Icones\icons8-paie-500.png" />
+    <Content Include="Assets\Icones\icons8-paiement-en-ligne-500-2.png" />
+    <Content Include="Assets\Icones\icons8-paiement-en-ligne-500.png" />
+    <Content Include="Assets\Icones\icons8-paiement-mobile-500.png" />
+    <Content Include="Assets\Icones\icons8-paramètres-500-2.png" />
+    <Content Include="Assets\Icones\icons8-paramètres-500.png" />
+    <Content Include="Assets\Icones\icons8-parcourir-le-dossier-500.png" />
+    <Content Include="Assets\Icones\icons8-parler-en-public-500.png" />
+    <Content Include="Assets\Icones\icons8-partager-500.png" />
+    <Content Include="Assets\Icones\icons8-partenariat-homme-femme-500.png" />
+    <Content Include="Assets\Icones\icons8-partir-500.png" />
+    <Content Include="Assets\Icones\icons8-pas-de-frais-cachés-500.png" />
+    <Content Include="Assets\Icones\icons8-passé-500.png" />
+    <Content Include="Assets\Icones\icons8-pays-500.png" />
+    <Content Include="Assets\Icones\icons8-pdf-2-500.png" />
+    <Content Include="Assets\Icones\icons8-pdf-500.png" />
+    <Content Include="Assets\Icones\icons8-peak-performers-500.png" />
+    <Content Include="Assets\Icones\icons8-pensée-critique-500.png" />
+    <Content Include="Assets\Icones\icons8-people-working-together-500.png" />
+    <Content Include="Assets\Icones\icons8-performance-de-ventes-500.png" />
+    <Content Include="Assets\Icones\icons8-person-growth-500.png" />
+    <Content Include="Assets\Icones\icons8-peso-symbol-500.png" />
+    <Content Include="Assets\Icones\icons8-petite-entreprise-500.png" />
+    <Content Include="Assets\Icones\icons8-pile-500.png" />
+    <Content Include="Assets\Icones\icons8-pipeline-500.png" />
+    <Content Include="Assets\Icones\icons8-pizza-delivery-500.png" />
+    <Content Include="Assets\Icones\icons8-pièces-de-monnaie-500.png" />
+    <Content Include="Assets\Icones\icons8-planificateur-500.png" />
+    <Content Include="Assets\Icones\icons8-plus-500.png" />
+    <Content Include="Assets\Icones\icons8-podium-avec-audience-500.png" />
+    <Content Include="Assets\Icones\icons8-podium-avec-intervenant-500.png" />
+    <Content Include="Assets\Icones\icons8-podium-sans-intervenant-500.png" />
+    <Content Include="Assets\Icones\icons8-porte-voix-500.png" />
+    <Content Include="Assets\Icones\icons8-portefeuille-d%27investissement-500.png" />
+    <Content Include="Assets\Icones\icons8-poser-une-question-500.png" />
+    <Content Include="Assets\Icones\icons8-position-courte-500.png" />
+    <Content Include="Assets\Icones\icons8-position-longue-500.png" />
+    <Content Include="Assets\Icones\icons8-post-ads-500.png" />
+    <Content Include="Assets\Icones\icons8-poste-de-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-poteau-indicateur-500.png" />
+    <Content Include="Assets\Icones\icons8-poubelle-500.png" />
+    <Content Include="Assets\Icones\icons8-pour-vous-500.png" />
+    <Content Include="Assets\Icones\icons8-prendre-une-décision-500.png" />
+    <Content Include="Assets\Icones\icons8-priorité-basse-500.png" />
+    <Content Include="Assets\Icones\icons8-priorité-moyenne-500.png" />
+    <Content Include="Assets\Icones\icons8-prise-de-notes-500.png" />
+    <Content Include="Assets\Icones\icons8-privacy-policy-500.png" />
+    <Content Include="Assets\Icones\icons8-prix-de-l%27art-500.png" />
+    <Content Include="Assets\Icones\icons8-proactivité-500.png" />
+    <Content Include="Assets\Icones\icons8-process-improvement-500.png" />
+    <Content Include="Assets\Icones\icons8-processeur-500.png" />
+    <Content Include="Assets\Icones\icons8-processus-500.png" />
+    <Content Include="Assets\Icones\icons8-proche-de-moi-500.png" />
+    <Content Include="Assets\Icones\icons8-profit-analysis-500.png" />
+    <Content Include="Assets\Icones\icons8-profit-presentation-500.png" />
+    <Content Include="Assets\Icones\icons8-profit-report-500.png" />
+    <Content Include="Assets\Icones\icons8-program-500.png" />
+    <Content Include="Assets\Icones\icons8-project-setup-500-2.png" />
+    <Content Include="Assets\Icones\icons8-project-setup-500.png" />
+    <Content Include="Assets\Icones\icons8-projecteur-video-500.png" />
+    <Content Include="Assets\Icones\icons8-projet-500.png" />
+    <Content Include="Assets\Icones\icons8-propriétaire-500.png" />
+    <Content Include="Assets\Icones\icons8-prototype-500.png" />
+    <Content Include="Assets\Icones\icons8-précision-500.png" />
+    <Content Include="Assets\Icones\icons8-présent-à-tous-500.png" />
+    <Content Include="Assets\Icones\icons8-présentation-500.png" />
+    <Content Include="Assets\Icones\icons8-présentation-dynamique-financière-500.png" />
+    <Content Include="Assets\Icones\icons8-présentation-vocale-500.png" />
+    <Content Include="Assets\Icones\icons8-publicité-par-courrier-500.png" />
+    <Content Include="Assets\Icones\icons8-publicité-web-500.png" />
+    <Content Include="Assets\Icones\icons8-purposeful-man-500.png" />
+    <Content Include="Assets\Icones\icons8-purposeful-woman-500.png" />
+    <Content Include="Assets\Icones\icons8-puzzle-500.png" />
+    <Content Include="Assets\Icones\icons8-pyramide-de-maslow-500.png" />
+    <Content Include="Assets\Icones\icons8-questions-500.png" />
+    <Content Include="Assets\Icones\icons8-rafraîchir-500.png" />
+    <Content Include="Assets\Icones\icons8-rappels-de-rendez-vous-500.png" />
+    <Content Include="Assets\Icones\icons8-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-recherche-immobilière-500.png" />
+    <Content Include="Assets\Icones\icons8-recycle-bin-500.png" />
+    <Content Include="Assets\Icones\icons8-reddit-500.png" />
+    <Content Include="Assets\Icones\icons8-redimensionner-quatre-directions-500.png" />
+    <Content Include="Assets\Icones\icons8-redémarrer-500.png" />
+    <Content Include="Assets\Icones\icons8-refaire-500.png" />
+    <Content Include="Assets\Icones\icons8-remarque-importante-500.png" />
+    <Content Include="Assets\Icones\icons8-remote-desktop-500.png" />
+    <Content Include="Assets\Icones\icons8-rendez-vous-périodique-500.png" />
+    <Content Include="Assets\Icones\icons8-rental-house-contract-500.png" />
+    <Content Include="Assets\Icones\icons8-replanifier-une-tâche-500.png" />
+    <Content Include="Assets\Icones\icons8-requirement-500.png" />
+    <Content Include="Assets\Icones\icons8-restitution-de-document-500.png" />
+    <Content Include="Assets\Icones\icons8-retour-500.png" />
+    <Content Include="Assets\Icones\icons8-retour-d%27information-500.png" />
+    <Content Include="Assets\Icones\icons8-retrait-500.png" />
+    <Content Include="Assets\Icones\icons8-revendeur-500.png" />
+    <Content Include="Assets\Icones\icons8-room-finder-500.png" />
+    <Content Include="Assets\Icones\icons8-ruban-marque-page-500.png" />
+    <Content Include="Assets\Icones\icons8-rules-book-500.png" />
+    <Content Include="Assets\Icones\icons8-règles-500.png" />
+    <Content Include="Assets\Icones\icons8-réalité-virtuelle-500.png" />
+    <Content Include="Assets\Icones\icons8-réception-gps-500.png" />
+    <Content Include="Assets\Icones\icons8-réduire-la-fenêtre-500.png" />
+    <Content Include="Assets\Icones\icons8-référentiel-500.png" />
+    <Content Include="Assets\Icones\icons8-réponses-500.png" />
+    <Content Include="Assets\Icones\icons8-réseau-cellulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-résoudre-500.png" />
+    <Content Include="Assets\Icones\icons8-réunion-500.png" />
+    <Content Include="Assets\Icones\icons8-réveil-500-2.png" />
+    <Content Include="Assets\Icones\icons8-réveil-500-3.png" />
+    <Content Include="Assets\Icones\icons8-réveil-500.png" />
+    <Content Include="Assets\Icones\icons8-rééquilibrer-le-portefeuille-500.png" />
+    <Content Include="Assets\Icones\icons8-sablier-500-2.png" />
+    <Content Include="Assets\Icones\icons8-sablier-500.png" />
+    <Content Include="Assets\Icones\icons8-salaire-masculin-500.png" />
+    <Content Include="Assets\Icones\icons8-salary-female-500.png" />
+    <Content Include="Assets\Icones\icons8-salle-de-réunion-500.png" />
+    <Content Include="Assets\Icones\icons8-salon-de-coiffure-500.png" />
+    <Content Include="Assets\Icones\icons8-sankey-500.png" />
+    <Content Include="Assets\Icones\icons8-satisfaction-500.png" />
+    <Content Include="Assets\Icones\icons8-sauvegarder-500.png" />
+    <Content Include="Assets\Icones\icons8-scan-de-l%27iris-500.png" />
+    <Content Include="Assets\Icones\icons8-scanner-de-carte-de-visite-500.png" />
+    <Content Include="Assets\Icones\icons8-script-de-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-script-du-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-scroll-500.png" />
+    <Content Include="Assets\Icones\icons8-search-client-500.png" />
+    <Content Include="Assets\Icones\icons8-security-configuration-500.png" />
+    <Content Include="Assets\Icones\icons8-sepa-500.png" />
+    <Content Include="Assets\Icones\icons8-serveur-500.png" />
+    <Content Include="Assets\Icones\icons8-service-500.png" />
+    <Content Include="Assets\Icones\icons8-service-client-500.png" />
+    <Content Include="Assets\Icones\icons8-service-de-nettoyage-500.png" />
+    <Content Include="Assets\Icones\icons8-services-500.png" />
+    <Content Include="Assets\Icones\icons8-shortlist-500.png" />
+    <Content Include="Assets\Icones\icons8-signature-500.png" />
+    <Content Include="Assets\Icones\icons8-signing-a-document-500.png" />
+    <Content Include="Assets\Icones\icons8-slice-500.png" />
+    <Content Include="Assets\Icones\icons8-sms-500.png" />
+    <Content Include="Assets\Icones\icons8-société-500.png" />
+    <Content Include="Assets\Icones\icons8-soleil-500.png" />
+    <Content Include="Assets\Icones\icons8-sonnerie-phonelink-500.png" />
+    <Content Include="Assets\Icones\icons8-sonnette-500.png" />
+    <Content Include="Assets\Icones\icons8-sortie-500.png" />
+    <Content Include="Assets\Icones\icons8-split-money-500.png" />
+    <Content Include="Assets\Icones\icons8-ssd-500.png" />
+    <Content Include="Assets\Icones\icons8-stack-of-coins-500.png" />
+    <Content Include="Assets\Icones\icons8-stacked-organizational-chart-highlighted-first-node-500.png" />
+    <Content Include="Assets\Icones\icons8-stacked-organizational-chart-highlighted-parent-node-500.png" />
+    <Content Include="Assets\Icones\icons8-star-filled-500.png" />
+    <Content Include="Assets\Icones\icons8-statistics-report-500.png" />
+    <Content Include="Assets\Icones\icons8-statistiques-500.png" />
+    <Content Include="Assets\Icones\icons8-street-view-500.png" />
+    <Content Include="Assets\Icones\icons8-stripe-500.png" />
+    <Content Include="Assets\Icones\icons8-structure-des-prix-500.png" />
+    <Content Include="Assets\Icones\icons8-structure-en-arbre-500.png" />
+    <Content Include="Assets\Icones\icons8-stumbleupon-500.png" />
+    <Content Include="Assets\Icones\icons8-submit-idea-500.png" />
+    <Content Include="Assets\Icones\icons8-succès-financier-500.png" />
+    <Content Include="Assets\Icones\icons8-sujet-500.png" />
+    <Content Include="Assets\Icones\icons8-support-500.png" />
+    <Content Include="Assets\Icones\icons8-support-en-ligne-500.png" />
+    <Content Include="Assets\Icones\icons8-supprimer-500.png" />
+    <Content Include="Assets\Icones\icons8-supprimer-la-diapositive-500.png" />
+    <Content Include="Assets\Icones\icons8-supprimer-les-publicités-500.png" />
+    <Content Include="Assets\Icones\icons8-supprimer-un-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-supprimer-un-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-swift-500.png" />
+    <Content Include="Assets\Icones\icons8-swiftui-500.png" />
+    <Content Include="Assets\Icones\icons8-synchroniser-500.png" />
+    <Content Include="Assets\Icones\icons8-sécurisée-par-système-d%27alarme-500.png" />
+    <Content Include="Assets\Icones\icons8-sécurité-vérifiée-500.png" />
+    <Content Include="Assets\Icones\icons8-tampon-encreur-500-2.png" />
+    <Content Include="Assets\Icones\icons8-tampon-encreur-500.png" />
+    <Content Include="Assets\Icones\icons8-task-planning-500.png" />
+    <Content Include="Assets\Icones\icons8-teamwork-500.png" />
+    <Content Include="Assets\Icones\icons8-teaser-500.png" />
+    <Content Include="Assets\Icones\icons8-terms-and-conditions-500.png" />
+    <Content Include="Assets\Icones\icons8-test-account-500.png" />
+    <Content Include="Assets\Icones\icons8-test-réussi-500.png" />
+    <Content Include="Assets\Icones\icons8-timeline-week-500.png" />
+    <Content Include="Assets\Icones\icons8-tinder-500.png" />
+    <Content Include="Assets\Icones\icons8-tips-500.png" />
+    <Content Include="Assets\Icones\icons8-total-sales-500.png" />
+    <Content Include="Assets\Icones\icons8-transfert-d%27argent-500.png" />
+    <Content Include="Assets\Icones\icons8-transfert-d%27argent-en-ligne-500.png" />
+    <Content Include="Assets\Icones\icons8-transférer-500.png" />
+    <Content Include="Assets\Icones\icons8-transit-on-map-500.png" />
+    <Content Include="Assets\Icones\icons8-travail-500.png" />
+    <Content Include="Assets\Icones\icons8-travailler-avec-un-ordinateur-portable-500.png" />
+    <Content Include="Assets\Icones\icons8-travel-agency-500.png" />
+    <Content Include="Assets\Icones\icons8-tri-croissant-500.png" />
+    <Content Include="Assets\Icones\icons8-tri-décroissant-500.png" />
+    <Content Include="Assets\Icones\icons8-trier-les-réponses-500.png" />
+    <Content Include="Assets\Icones\icons8-triste-500.png" />
+    <Content Include="Assets\Icones\icons8-trombone-500.png" />
+    <Content Include="Assets\Icones\icons8-trouver-un-emploi-correspondant-500.png" />
+    <Content Include="Assets\Icones\icons8-twitter-500.png" />
+    <Content Include="Assets\Icones\icons8-tâche-500.png" />
+    <Content Include="Assets\Icones\icons8-tâche-terminée-500.png" />
+    <Content Include="Assets\Icones\icons8-tâches-500.png" />
+    <Content Include="Assets\Icones\icons8-tâches-en-série-500.png" />
+    <Content Include="Assets\Icones\icons8-tâches-parallèles-500.png" />
+    <Content Include="Assets\Icones\icons8-téléchargement-des-mises-à-jour-500.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-500-2.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-500.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-depuis-le-cloud-500.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-le-rapport-de-diagramme-circulaire-500.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-le-rapport-de-graphique-500.png" />
+    <Content Include="Assets\Icones\icons8-télécharger-vers-le-cloud-500.png" />
+    <Content Include="Assets\Icones\icons8-u-shaped-style-500.png" />
+    <Content Include="Assets\Icones\icons8-u-turn-to-left-500.png" />
+    <Content Include="Assets\Icones\icons8-u-turn-to-right-500.png" />
+    <Content Include="Assets\Icones\icons8-unité-organisationnelle-500.png" />
+    <Content Include="Assets\Icones\icons8-usb-2-500.png" />
+    <Content Include="Assets\Icones\icons8-usb-déconnectée-500.png" />
+    <Content Include="Assets\Icones\icons8-usb-off-500.png" />
+    <Content Include="Assets\Icones\icons8-usb-on-500.png" />
+    <Content Include="Assets\Icones\icons8-utilisateur-femme-500.png" />
+    <Content Include="Assets\Icones\icons8-utilisateur-masculin-500.png" />
+    <Content Include="Assets\Icones\icons8-valeur-maximale-500.png" />
+    <Content Include="Assets\Icones\icons8-valeur-minimale-500.png" />
+    <Content Include="Assets\Icones\icons8-valeur-moyenne-500.png" />
+    <Content Include="Assets\Icones\icons8-vastu-consultancy-500.png" />
+    <Content Include="Assets\Icones\icons8-vente-immobilière-500.png" />
+    <Content Include="Assets\Icones\icons8-verrouiller-2-500.png" />
+    <Content Include="Assets\Icones\icons8-vers-l%27avant-500.png" />
+    <Content Include="Assets\Icones\icons8-vers-le-bas-500.png" />
+    <Content Include="Assets\Icones\icons8-vip-500.png" />
+    <Content Include="Assets\Icones\icons8-visible-500.png" />
+    <Content Include="Assets\Icones\icons8-vision-500.png" />
+    <Content Include="Assets\Icones\icons8-voice-id-500.png" />
+    <Content Include="Assets\Icones\icons8-voir-les-détails-500-2.png" />
+    <Content Include="Assets\Icones\icons8-voir-les-détails-500.png" />
+    <Content Include="Assets\Icones\icons8-vue-500.png" />
+    <Content Include="Assets\Icones\icons8-vérifié-500.png" />
+    <Content Include="Assets\Icones\icons8-walesonline-500.png" />
+    <Content Include="Assets\Icones\icons8-weak-financial-growth-500.png" />
+    <Content Include="Assets\Icones\icons8-web-analytics-500.png" />
+    <Content Include="Assets\Icones\icons8-web-design-500.png" />
+    <Content Include="Assets\Icones\icons8-webcam-500.png" />
+    <Content Include="Assets\Icones\icons8-wifi-500.png" />
+    <Content Include="Assets\Icones\icons8-windows-client-500.png" />
+    <Content Include="Assets\Icones\icons8-windows-explorer-500.png" />
+    <Content Include="Assets\Icones\icons8-windows10-personalization-500.png" />
+    <Content Include="Assets\Icones\icons8-yard-sale-500.png" />
+    <Content Include="Assets\Icones\icons8-zip-500.png" />
+    <Content Include="Assets\Icones\icons8-zoomer-500-2.png" />
+    <Content Include="Assets\Icones\icons8-zoomer-500.png" />
+    <Content Include="Assets\Icones\icons8-échange-de-devises-500.png" />
+    <Content Include="Assets\Icones\icons8-échanger-500.png" />
+    <Content Include="Assets\Icones\icons8-école-500.png" />
+    <Content Include="Assets\Icones\icons8-étoile-500.png" />
+    <Content Include="Assets\Icones\icons8-évaluation-500.png" />
+    <Content Include="Assets\Icones\icons8-évaluations-500.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\MoreLogo\LOGO_WIN10.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\theme\uwp-dark.png" />
+    <Content Include="Assets\theme\uwp-light.png" />
+    <Content Include="Assets\Wallpaper\ios14_wallpaper.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AboutApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="audioapps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="network.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemAppsAvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml">
+      <Version>2.11.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Graph">
+      <Version>3.19.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Parsers">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Services">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Connectivity">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.DeveloperTools">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Animations">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls.Graph">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Lottie">
+      <Version>6.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Media">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.4.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MANAGER NETWORK DETECTOR™_TemporaryKey.pfx" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BÊTA|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\BÊTA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BÊTA|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\BÊTA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BÊTA|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\BÊTA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'BÊTA|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\BÊTA\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevDebug|x86'">
+    <OutputPath>bin\x86\DevDebug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevDebug|ARM'">
+    <OutputPath>bin\ARM\DevDebug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevDebug|ARM64'">
+    <OutputPath>bin\ARM64\DevDebug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevDebug|x64'">
+    <OutputPath>bin\x64\DevDebug\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
